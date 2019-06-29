@@ -17,7 +17,7 @@ fi
 
     
 
-wget -O /tmp/xcplugin.ipk "http://lululla.altervista.org/upload/index.php?dir=files/&file=enigma2-plugin-extensions-xcplugin-lite_1.0_all.ipk" && chmod 777 /tmp/xcplugin.ipk && opkg install /tmp/xcplugin.ipk && wget -O /etc/enigma2/iptv.sh "http://"${host}"/get.php?username="${nomeutente}"&password="${password}"&type=enigma22_script&output=ts" && /etc/enigma2/iptv.sh && echo "<?xml version=\"1.0\" encoding=\"UTF-8\" ?>
+wget -O /tmp/xcplugin.ipk "http://download1151.mediafire.com/gpg85piou8rg/fy8wzapo7881ekr/enigma2-plugin-extensions-xcplugin-lite_1.0_all.ipk" && chmod 777 /tmp/xcplugin.ipk && opkg install /tmp/xcplugin.ipk && wget -O /etc/enigma2/iptv.sh "http://"${host}"/get.php?username="${nomeutente}"&password="${password}"&type=enigma22_script&output=ts" && /etc/enigma2/iptv.sh && echo "<?xml version=\"1.0\" encoding=\"UTF-8\" ?>
 <items>
 <plugin_version>1.0</plugin_version>                              
 <xtream_e2portal_url><![CDATA[http://"${host}"/enigma2.php]]></xtream_e2portal_url>
