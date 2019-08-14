@@ -17,7 +17,7 @@ fi
 
     
 
-wget -O /var/volatile/tmp/xcplugin.ipk "http://download855.mediafire.com/oc36hb2jfkzg/bynbri69r9bo1g8/enigma2-plugin-extensions-xcplugin-lite_2.1_all.ipk" && chmod 777 /var/volatile/tmp/xcplugin.ipk && opkg install /var/volatile/tmp/xcplugin.ipk && wget -O /etc/enigma2/iptv.sh "http://"${host}"/get.php?username="${nomeutente}"&password="${password}"&type=enigma22_script&output=ts" && /etc/enigma2/iptv.sh && echo "<?xml version=\"1.0\" encoding=\"UTF-8\" ?>
+wget -O /var/volatile/tmp/xcplugin.ipk "http://download740.mediafire.com/2ecnlu8d2lzg/bynbri69r9bo1g8/enigma2-plugin-extensions-xcplugin-lite_2.1_all.ipk" && chmod 777 /var/volatile/tmp/xcplugin.ipk && opkg install /var/volatile/tmp/xcplugin.ipk && wget -O /etc/enigma2/iptv.sh "http://"${host}"/get.php?username="${nomeutente}"&password="${password}"&type=enigma22_script&output=ts" && /etc/enigma2/iptv.sh && echo "<?xml version=\"1.0\" encoding=\"UTF-8\" ?>
 <items>
 <plugin_version>1.0</plugin_version>                              
 <xtream_e2portal_url><![CDATA[http://"${host}"/enigma2.php]]></xtream_e2portal_url>
