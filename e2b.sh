@@ -8,7 +8,7 @@ echo ${password}
 echo ${host}
 
 
-mkdir -p /etc/enigma2/e2m3u2bouquet/ && wget -O /tmp/e2m3u2bouquet.ipk "https://github.com/su1s/e2m3u2bouquet/releases/download/v0.8.2/enigma2-plugin-extensions-e2m3u2bouquet_0.8.2_all.ipk" && chmod 777 /tmp/e2m3u2bouquet.ipk && opkg install /tmp/e2m3u2bouquet.ipk  && echo "<config>
+mkdir -p /etc/enigma2/e2m3u2bouquet/ && wget -O /root/e2m3u2bouquet.ipk "https://github.com/su1s/e2m3u2bouquet/releases/download/v0.8.2/enigma2-plugin-extensions-e2m3u2bouquet_0.8.2_all.ipk" && chmod 777 /root/e2m3u2bouquet.ipk && opkg install /root/e2m3u2bouquet.ipk  && echo "<config>
   <supplier>
     <name>SOCIETY</name><!-- Supplier Name -->
     <enabled>1</enabled><!-- Enable or disable the supplier (0 or 1) -->
