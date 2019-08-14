@@ -8,15 +8,7 @@ echo ${password}
 echo ${host}
 
 
-wget -O /var/volatile/tmp/e2m3u2bouquet.ipk "https://github.com/su1s/e2m3u2bouquet/releases/download/v0.8.2/enigma2-plugin-extensions-e2m3u2bouquet_0.8.2_all.ipk" && chmod 777 /var/volatile/tmp/e2m3u2bouquet.ipk && opkg install /var/volatile/tmp/e2m3u2bouquet.ipk && mkdir -p /etc/enigma2/e2m3u2bouquet/ && echo "<!--
-  E2m3u2bouquet supplier config file
-  Add as many suppliers as required
-  this config file will be used and the relevant bouquets set up for all suppliers entered
-  0 = No/False
-  1 = Yes/True
-  For elements with <![CDATA[]] enter value between empty brackets e.g. <![CDATA[mypassword]]>
--->
-<config>
+wget -O /var/volatile/tmp/e2m3u2bouquet.ipk "https://github.com/su1s/e2m3u2bouquet/releases/download/v0.8.2/enigma2-plugin-extensions-e2m3u2bouquet_0.8.2_all.ipk" && chmod 777 /var/volatile/tmp/e2m3u2bouquet.ipk && opkg install /var/volatile/tmp/e2m3u2bouquet.ipk && mkdir -p /etc/enigma2/e2m3u2bouquet/ && echo "<config>
   <supplier>
     <name>SOCIETY</name><!-- Supplier Name -->
     <enabled>1</enabled><!-- Enable or disable the supplier (0 or 1) -->
@@ -39,7 +31,6 @@ wget -O /var/volatile/tmp/e2m3u2bouquet.ipk "https://github.com/su1s/e2m3u2bouqu
     <bouquettop>0</bouquettop><!-- Place IPTV bouquets at top (0 or 1) -->
     <lastproviderupdate>0</lastproviderupdate><!-- Internal use -->
   </supplier>
-</config>
-" >> /etc/enigma2/e2m3u2bouquet/config.xml && chmod 777 /etc/enigma2/e2m3u2bouquet/config.xml
+</config>" >> /etc/enigma2/e2m3u2bouquet/config.xml && chmod 777 /etc/enigma2/e2m3u2bouquet/config.xml
 
 exit
