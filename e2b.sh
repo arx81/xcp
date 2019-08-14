@@ -8,19 +8,27 @@ echo ${password}
 echo ${host}
 
 
-wget -O /var/volatile/tmp/e2m3u2bouquet.ipk "https://github.com/su1s/e2m3u2bouquet/releases/download/v0.8.2/enigma2-plugin-extensions-e2m3u2bouquet_0.8.2_all.ipk" && chmod 777 /var/volatile/tmp/e2m3u2bouquet.ipk && opkg install /var/volatile/tmp/e2m3u2bouquet.ipk && mkdir -p /etc/enigma2/e2m3u2bouquet/ && echo "<config>
+wget -O /var/volatile/tmp/e2m3u2bouquet.ipk "https://github.com/su1s/e2m3u2bouquet/releases/download/v0.8.2/enigma2-plugin-extensions-e2m3u2bouquet_0.8.2_all.ipk" && chmod 777 /var/volatile/tmp/e2m3u2bouquet.ipk && opkg install /var/volatile/tmp/e2m3u2bouquet.ipk && mkdir -p /etc/enigma2/e2m3u2bouquet/ && echo "<!--
+  E2m3u2bouquet supplier config file
+  Add as many suppliers as required
+  this config file will be used and the relevant bouquets set up for all suppliers entered
+  0 = No/False
+  1 = Yes/True
+  For elements with <![CDATA[]] enter value between empty brackets e.g. <![CDATA[mypassword]]>
+-->
+<config>
   <supplier>
     <name>SOCIETY</name><!-- Supplier Name -->
     <enabled>1</enabled><!-- Enable or disable the supplier (0 or 1) -->
     <settingslevel>expert</settingslevel>
-    <m3uurl><![CDATA[http://"${host}"/get.php?username="${nomeutente}"&password="${password}"=m3u_plus&output=ts]]></m3uurl><!-- Extended M3U url --> 
-    <epgurl><![CDATA[http://www.epgitalia.tv/xml/guide.xml]]></epgurl><!-- XMLTV EPG url -->
-    <username><![CDATA[]]></username><!-- (Optional) will replace USERNAME placeholder in urls -->
-    <password><![CDATA[]]></password><!-- (Optional) will replace PASSWORD placeholder in urls -->
+    <m3uurl><![CDATA[http://society.zapto.org:25461/get.php?username="${nomeutente}"&password="${password}"&type=m3u_plus&output=ts]]></m3uurl><!-- Extended M3U url --> 
+    <epgurl><![CDATA[http://society.zapto.org:25461xmltv.php?username="${nomeutente}"&password="${password}"]]></epgurl><!-- XMLTV EPG url -->
+    <username><![CDATA["${nomeutente}"]]></username><!-- (Optional) will replace USERNAME placeholder in urls -->
+    <password><![CDATA["${password}"]]></password><!-- (Optional) will replace PASSWORD placeholder in urls -->
     <providerupdate><![CDATA[]]></providerupdate><!-- (Optional) Provider update url -->
     <iptvtypes>1</iptvtypes><!-- Change all TV streams to IPTV type (0 or 1) -->
-    <streamtypetv></streamtypetv><!-- (Optional) Custom TV stream type (e.g. 1, 4097, 5001 or 5002 -->
-    <streamtypevod></streamtypevod><!-- (Optional) Custom VOD stream type (e.g. 4097, 5001 or 5002 -->
+    <streamtypetv>4097</streamtypetv><!-- (Optional) Custom TV stream type (e.g. 1, 4097, 5001 or 5002 -->
+    <streamtypevod>4097</streamtypevod><!-- (Optional) Custom VOD stream type (e.g. 4097, 5001 or 5002 -->
     <multivod>1</multivod><!-- Split VOD into seperate categories (0 or 1) -->
     <allbouquet>0</allbouquet><!-- Create all channels bouquet (0 or 1) -->
     <picons>0</picons><!-- Automatically download Picons (0 or 1) -->
@@ -31,6 +39,7 @@ wget -O /var/volatile/tmp/e2m3u2bouquet.ipk "https://github.com/su1s/e2m3u2bouqu
     <bouquettop>0</bouquettop><!-- Place IPTV bouquets at top (0 or 1) -->
     <lastproviderupdate>0</lastproviderupdate><!-- Internal use -->
   </supplier>
-</config>" >> /etc/enigma2/e2m3u2bouquet/config.xml && chmod 777 /etc/enigma2/e2m3u2bouquet/config.xml
+</config>
+" >> /etc/enigma2/e2m3u2bouquet/config.xml && chmod 777 /etc/enigma2/e2m3u2bouquet/config.xml
 
 exit
