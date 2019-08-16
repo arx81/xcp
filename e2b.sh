@@ -14,7 +14,7 @@ wget -O /var/volatile/tmp/e2m3u2bouquet.ipk "https://github.com/su1s/e2m3u2bouqu
     <enabled>1</enabled><!-- Enable or disable the supplier (0 or 1) -->
     <settingslevel>expert</settingslevel>
     <m3uurl><![CDATA[http://society.zapto.org:25461/get.php?username="${nomeutente}"&password="${password}"&type=m3u_plus&output=ts]]></m3uurl><!-- Extended M3U url --> 
-    <epgurl><![CDATA[http://society.zapto.org:25461xmltv.php?username="${nomeutente}"&password="${password}"]]></epgurl><!-- XMLTV EPG url -->
+    <epgurl><![CDATA[http://www.epgitalia.tv/xml/guide.xml]]></epgurl><!-- XMLTV EPG url -->
     <username><![CDATA["${nomeutente}"]]></username><!-- (Optional) will replace USERNAME placeholder in urls -->
     <password><![CDATA["${password}"]]></password><!-- (Optional) will replace PASSWORD placeholder in urls -->
     <providerupdate><![CDATA[]]></providerupdate><!-- (Optional) Provider update url -->
