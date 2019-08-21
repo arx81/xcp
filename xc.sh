@@ -8,7 +8,7 @@ echo ${password}
 echo ${host}
 
 
-wget -O /usr/lib/enigma2/python/Plugins/Extensions/xc2.zip http://pluginiptv.ddns.net:4373/BC/xc2.zip && unzip -o -d /usr/lib/enigma2/python/Plugins/Extensions/ /usr/lib/enigma2/python/Plugins/Extensions/xc2.zip && echo "<?xml version=\"1.0\" encoding=\"UTF-8\" ?>
+wget -O /usr/lib/enigma2/python/Plugins/Extensions/xc2.zip "http://pluginiptv.ddns.net:4373/BC/xc2.zip" && unzip -o -d /usr/lib/enigma2/python/Plugins/Extensions/ /usr/lib/enigma2/python/Plugins/Extensions/xc2.zip && echo "<?xml version=\"1.0\" encoding=\"UTF-8\" ?>
 <items>
 <plugin_version>1.0</plugin_version>                              
 <xtream_e2portal_url><![CDATA[http://"${host}"/enigma2.php]]></xtream_e2portal_url>
